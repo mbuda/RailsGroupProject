@@ -1,5 +1,7 @@
 class Game < ActiveRecord::Base
 
+  has_many :reviews
+
   validates :title, presence: true, uniqueness: true
   validates :description, presence: true
   validates :release_date, presence: true
