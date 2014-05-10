@@ -11,9 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140510142623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: true do |t|
+    t.string "text"
+  end
+
+  create_table "games", force: true do |t|
+    t.string "title"
+    t.string "description"
+    t.date   "release_date"
+    t.string "requirements"
+    t.string "genre"
+    t.string "PEGI"
+    t.string "producent"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.string  "title"
+    t.string  "description"
+    t.integer "user_id"
+  end
+
+  create_table "users", force: true do |t|
+    t.string "nickname",    null: false
+    t.string "password",    null: false
+    t.string "description"
+  end
 
 end
