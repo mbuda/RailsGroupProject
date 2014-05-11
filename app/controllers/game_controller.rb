@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
 def show
-@game = Game.show
+@game = Game.find(params[:id])
 end
 
 
