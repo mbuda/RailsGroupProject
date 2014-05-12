@@ -1,11 +1,38 @@
 <%= form_for(@game) do |f| %>
 
-	<div class="description"></div>
-	<div class="requirements"></div>
-	<div class="image"></div>
-	<div class="genre"></div>
-	<div class="pegi"></div>
-	<div class="release_date"></div>
-	<div class="producent"></div>
+	<div class="title">
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</div>	
+
+	<div class="field">
+		<%= f.label :description %><br>
+		<%= f.text_field :description %>
+	</div>	
+
+	<div class="field">
+		<%= f.label :requirements %><br>
+		<%= f.text_field :requirements %>
+	</div>	
+
+	<div class="field">
+		<%= f.label :genre %><br>
+		<%= f.select :genre %>
+	</div>	
+
+	<div class="field">
+		<%= f.label :PEGI %><br>
+		<%= f.select :PEGI %>
+	</div>	
+
+	<div class="field">
+		<%= f.label :release_date %><br>
+		<%= f.text_field :release_date %>
+	</div>		
+
+	<div class="field">
+		<%= f.label :producent %><br>
+		<%= f.text_field :producent %>
+	</div>		
 
 <% end %>
