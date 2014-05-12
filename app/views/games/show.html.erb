@@ -1,22 +1,23 @@
 <div class="main">
 
-  <p> Title: <%= game.title %> </p><br>
-  <p> Producent: <%= game.producent %> </p><br>
-  <p> Release Date: <%= game.release_date %> </p><br>
-  <p> Description: <%= game.description %> </p><br>
-  <p> Requirements: <%= game.requirements %></p><br>
-  <p> Genre: <%= game.genre %> </p><br>
-  <p> PEGI: <%= game.PEGI %> </p><br><br>
+  <p> Title: <%= @game.title %> </p><br>
+  <p> Producent: <%= @game.producent %> </p><br>
+  <p> Release Date: <%= @game.release_date %> </p><br>
+  <p> Description: <%= @game.description %> </p><br>
+  <p> Requirements: <%= @game.requirements %></p><br>
+  <p> Genre: <%= @game.genre %> </p><br>
+  <p> PEGI: <%= @game.PEGI %> </p><br><br>
 
       <%= link_to 'Edit', edit_game_path(@game) %>
       <%= link_to 'Back', games_path %>
 
-    <% @reviews.each do |review| %>
-        <% if review.game == game.title %>
 
-        <%=link_to review.title, review %>
+<h3>Recenzje </h3>
 
-        <% end %>
+    <% @game.reviews.each do |review| %>
+
+        <p><%= link_to review.title, review %></p><br>
+
     <% end %>
 
 </div>
