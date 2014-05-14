@@ -1,0 +1,28 @@
+<h1>List of games</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Producent</th>
+      <th>Release Date</th>
+      <th>Genre</th>
+      <th>PEGI</th>
+      <th>Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.description %></td>
+        <td><%= game.producent%></td>
+        <td><%= game.release_date%></td>
+        <td><%= game.genre%></td>
+        <td><%= game.PEGI%></td>
+        <td><%= game.requirements%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
