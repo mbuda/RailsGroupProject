@@ -4,6 +4,7 @@ Group::Application.routes.draw do
  
   resources :reviews do
 	resources :games
+	resources :users
   end
 
 end
