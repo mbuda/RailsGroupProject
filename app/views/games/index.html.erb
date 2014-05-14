@@ -1,0 +1,17 @@
+<h1>List of games</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= link_to game.title, game %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
