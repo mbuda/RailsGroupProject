@@ -12,14 +12,14 @@
   <tbody>
     <% @reviews.each do |review| %>
       <tr>
-        <td><%= review.title %></td>
-        <td><%= review.description %></td>
-        <td><%= review.user.nickname%></td>
+        <td><%= review.title_capital %></td>
+        <td><%= review.full_description %></td>
+        <td><%= review.nick%></td>
         <td><%= review.comments.size%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-
+<%= link_to 'Add new review', new_review_path %>
 
