@@ -1,0 +1,40 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+  background-color: #222222;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.container-fluid{
+	background: linear-gradient(#453258, #282031);
+}
+
+.nav > li > a{
+	color: #9868A7;
+}
+
+.nav > li > a:hover{
+	background: linear-gradient(#9868A7, #453258);
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
