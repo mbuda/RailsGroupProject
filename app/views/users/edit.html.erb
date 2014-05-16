@@ -5,9 +5,11 @@
 <div class="links">
 
   <div class="btn btn-info">
+   <%= link_to 'Back', users_path %>
+  </div>
 
-   <%= link_to 'Back', reviews_path %>
-
+  <div class="btn btn-info">
+   <%= link_to 'Delete', user, method :delete, data: {confirm: "Are you sure?"}$
   </div>
 
 
