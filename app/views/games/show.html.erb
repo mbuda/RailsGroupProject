@@ -10,12 +10,15 @@
       <%= link_to 'Edit', edit_game_path(@game) %>
       <%= link_to 'Back', games_path %>
 
-  <h3>Recenzje </h3>
+  <h3>Reviews: </h3>
 
     <% @game.reviews.each do |review| %>
 
-      <p><%= link_to review.title, review %></p><br>
+      <p><%= link_to review.title, game_review_path(@game, review) %></p><br>
 
     <% end %>
 </div>
 
+  <div class="btn btn-info">
+	<%= link_to 'Add New', new_game_review_path(@game) %>
+  </div>
