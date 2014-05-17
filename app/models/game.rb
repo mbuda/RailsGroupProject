@@ -22,28 +22,24 @@ class Game < ActiveRecord::Base
     	description.split[0..15].join(' ') unless description.nil?
   end
 
-  def game_title
-    	game.title unless title.nil?
-  end
-
   def rel_date
-    	game.release_date unless release_date.nil? 
+    	release_date unless release_date.nil? 
   end
 
   def req
-    	game.requirements unless requirements.nil?
+    	requirements unless requirements.nil?
   end
 
   def game_genre
-	geme.genre unless genre.nil?
+	genre unless genre.nil?
   end
 
   def game_PEGI
-	game.PEGI unless PEGI.nil?
+	PEGI unless PEGI.nil?
   end
 
   def game_producent
-	game.producent unless producent.nil?
+	producent unless producent.nil?
   end
 
 end
