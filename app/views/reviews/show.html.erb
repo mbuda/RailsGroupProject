@@ -1,5 +1,6 @@
 <div class="content-center">
   <h3><strong><%= @review.title_capital %></strong></h3>
+  <h4><%= link_to @review.game_title, @review.game %></h4>
   <p><%= @review.full_description %></p>
   <p>by <%= @review.nick %></p>
 
@@ -12,9 +13,9 @@
   <% end %>
   <div class="links">
     <div class="btn btn-info">
-      <%= link_to 'Edit', edit_review_path(@review) %>
+      <%= link_to 'Edit', edit_game_review_path(@review.game, @review) %>
     </div>
     <div class="btn btn-info">
-      <%= link_to 'Go back', reviews_path %>
+      <%= link_to 'Go back', game_reviews_path %>
     </div>
 </div>

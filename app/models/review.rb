@@ -6,6 +6,10 @@ class Review < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true
   validates :description, presence: true
 
+  def game_title
+    game.title unless game.nil?
+  end
+
   def title_capital
     title.capitalize unless title.nil?
   end

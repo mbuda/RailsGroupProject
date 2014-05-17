@@ -2,9 +2,9 @@
 
 <div class="links">
   <div class="btn btn-info">
-    <%= link_to 'Go back', reviews_path %>
+    <%= link_to 'Go back', game_reviews_path %>
     <%= link_to 'Delete it',
-      review, method: :delete, data: {confirm: "Are you sure?"} %>
+      [@review.game, @review], method: :delete, data: {confirm: "Are you sure?"} %>
   </div>
 
   <%= render 'form' %>

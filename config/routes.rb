@@ -1,10 +1,10 @@
 Group::Application.routes.draw do
 
   root to: 'reviews#index'
- 
-  resources :reviews do
-	resources :games
-	resources :users
+
+  resources :games do
+    resources :reviews
   end
+  resources :users
 
 end
