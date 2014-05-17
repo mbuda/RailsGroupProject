@@ -1,13 +1,12 @@
+<%= content_for :title, "Edit a review" %>
 <h1>Editing review</h1>
 
-<div class="links">
-  <div class="btn btn-info">
-    <%= link_to 'Go back', game_reviews_path %>
-    <%= link_to 'Delete it',
-      [@review.game, @review], method: :delete, data: {confirm: "Are you sure?"} %>
-  </div>
-
-  <%= render 'form' %>
-
+<div class="btn btn-info">
+  <%= link_to 'Go back', game_reviews_path %>
 </div>
+<div class="btn btn-danger">
+  <%= link_to 'Delete it',
+    [@game, @review], method: :delete, data: {confirm: "Are you sure?"} %>
+</div>
+<%= render 'form' %>
 
