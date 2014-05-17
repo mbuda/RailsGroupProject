@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
-  def show   
+  def show
   end
 
   def new
@@ -20,8 +20,8 @@ class ReviewsController < ApplicationController
         render action: 'new'
       end
   end
- 
-  def update 
+
+  def update
     respond_to do |format|
       if @review.update_attributes(params[:post])
         flash[:notice] = 'Review successfully updated'
@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
         format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml { render :xml => @review.errors, 
+        format.xml { render :xml => @review.errors,
                      :status => :unprocessable_entity }
       end
     end
@@ -39,7 +39,7 @@ class ReviewsController < ApplicationController
     @review.destroy
 
     respond_to do |format|
-      format.html { redirect_to(reviews_url) }
+      format.html { redirect_to(game_reviews_path) }
       format.xml { head :ok }
     end
   end
