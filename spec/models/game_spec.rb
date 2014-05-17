@@ -4,7 +4,14 @@ describe Game do
   subject {
 	Game.create(
 		title:"witty title",
-		description:"Much game so fun")
+		description:"Fun",
+		release_date:"12.05.2004",
+		requirements:"High",
+		genre:"Shooter",
+		PEGI:13,
+		producent:"Arc"
+		)
+		
 	}
 
 	context "#title_capital" do
