@@ -4,13 +4,15 @@
 	<thread>
 	 <tr>
 	   <th>User</th>
+	   <th>Review count</th>
 	 </tr>
 	</thread>
 
 	<tbody>
 	  <% @user.each do |user| %>
 	    <tr>
-		<td><%=link_to user.nickname, user %>
+		<td><%=link_to user.nickname, user %></td>
+		<td><% user.reviews.size %> </td>
 	    </tr>	
 	  <% end %>
 	</tbody>
