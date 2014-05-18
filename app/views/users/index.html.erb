@@ -1,0 +1,17 @@
+<h1>List of users</h1>
+
+<table class="table">
+	<thread>
+	 <tr>
+	   <th>User</th>
+	 </tr>
+	</thread>
+
+	<tbody>
+	  <% @user.each do |user| %>
+	    <tr>
+		<td><%=link_to user.nickname, user %>
+	    </tr>	
+	  <% end %>
+	</tbody>
+</table
