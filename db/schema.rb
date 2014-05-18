@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518075701) do
+ActiveRecord::Schema.define(version: 20140518084146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140518075701) do
     t.date   "release_date"
     t.string "requirements"
     t.string "genre"
-    t.string "PEGI"
+    t.string "pegi"
     t.string "producent"
   end
 
