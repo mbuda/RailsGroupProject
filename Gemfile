@@ -5,6 +5,9 @@ gem 'rails', '4.0.3'
 
 gem 'pg'
 
+gem 'shelly-dependencies', group: :production
+gem 'thin'
+
 gem 'simple_form'
 
 # Use SCSS for stylesheets
