@@ -1,0 +1,16 @@
+game-reviews:
+  ruby_version: 2.1.1
+  environment: production
+  domains:
+    - game-reviews.shellyapp.com
+  servers:
+    app1:
+      size: small
+      thin: 2
+      # delayed_job: 1
+      # sidekiq: 1
+      # clockwork: on
+      # whenever: on
+      # elasticsearch: on
+      databases:
+        - postgresql
