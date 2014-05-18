@@ -1,17 +1,32 @@
 <%= content_for :title, "#{@review.title_capital}" %>
-<div class="content-center">
-  <h3><strong><%= @review.title_capital %></strong></h3>
-  <h4><%= link_to @review.game_title, @review.game %></h4>
-  <p><%= @review.full_description %></p>
-  <p>by <%= @review.nick %></p>
-
+<div class="container">
+  <div class="page-header">
+    <h2>Review details</h2>
+  </div>
+  <div class="row">
+    <div class="span4 well well-lg">
+      <h3><strong><%= @review.title_capital %></strong></h3>
+      <h4><%= link_to @review.game_title, @review.game %></h4>
+      <p><%= @review.full_description %></p>
+      <p>by <%= @review.nick %></p>
+    </div>
+  </div>
   <br />
-
-  <h4>List of comments</h4>
-  <% @review.comments do |comment| %>
-    <p><%= comment.text %></p>
-    <p>by <%=comment.user.nickname %>
-  <% end %>
+  <div class="span12 well-sm">
+    <p>Add a comment</p>
+    <%= simple_form_for @comment do |f| %>
+      <%= f.hidden_field :review_id, value: @review.id %>
+      <%= f.hidden_field :game_id, value: @review.game_id %>
+      <%= f.input :text %>
+      <%= f.button :submit %>
+    <% end %>
+    <h4>List of comments</h4>
+    <% @review.comments.each do |comment| %>
+      <div class="well">
+        <p><%= comment.text %></p>
+      </div>
+    <% end %>
+  </div>
   <div class="links">
     <div class="btn btn-info">
       <%= link_to 'Edit', edit_game_review_path(@review.game, @review) %>
@@ -19,4 +34,4 @@
     <div class="btn btn-info">
       <%= link_to 'Go back', game_reviews_path %>
     </div>
-</div>
+  </div>

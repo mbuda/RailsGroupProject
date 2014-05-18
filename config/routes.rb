@@ -6,5 +6,5 @@ Group::Application.routes.draw do
     resources :reviews
   end
   resources :users
-
+  resources :comments
 end
