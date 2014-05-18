@@ -1,10 +1,11 @@
+<%= content_for :title, "Edit game #{@game.title_capital}" %>
 <h1>Editing game</h1>
 
 <div class="links">
   <div class="btn btn-info">
-    <%= link_to 'Back', reviews_path %>
+    <%= link_to 'Back', game_reviews_path(@game) %>
   </div>
-
-  <%= render 'form' %>
-
 </div>
+
+<%= render 'form' %>
+

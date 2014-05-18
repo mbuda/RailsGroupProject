@@ -1,16 +1,19 @@
+<%= content_for :title, "List of games" %>
 <h1>List of games</h1>
 
 <table class="table">
   <thead>
     <tr>
       <th>Title</th>
+      <th>Number of reviews</th>
     </tr>
   </thead>
 
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= link_to game.title, game %></td>
+        <td><%= link_to game.title_capital, game %></td>
+        <td><%= game.reviews.size %></td>
       </tr>
     <% end %>
   </tbody>
