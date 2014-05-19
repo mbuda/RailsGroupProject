@@ -1,12 +1,29 @@
-<%= simple_form_for(@review) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title, label: "Title: " %>
-    <%= f.input :description, label: "Description: " %>
+<div class="row-fluid">
+  <div class="span4 well">
+    <%= simple_form_for [@game, @review], html: { class: "form-horizontal" } do |f| %>
+      <fieldset>
+        <legend>
+          <h3>...:::Review:::...</h3>
+        </legend>
+        <div class="form-group">
+          <div class="col-xs-4">
+            <%= f.association :game, prompt: "Choose a game", class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-4">
+            <%= f.input :title, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-4">
+            <%= f.input :description, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
+      </fieldset>
+    <% end %>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
-
+</div>

@@ -5,6 +5,9 @@ gem 'rails', '4.0.3'
 
 gem 'pg'
 
+gem 'shelly-dependencies', group: :production
+gem 'thin'
+
 gem 'simple_form'
 
 # Use SCSS for stylesheets
@@ -12,6 +15,7 @@ gem 'sass-rails', '~> 4.0.0'
 
 #Use Bootstrap for...layout...and stuff
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap_form'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -38,5 +42,5 @@ group :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'capybara'
-  gem 'cucumber-rails'
+  gem 'factory_girl_rails'
 end

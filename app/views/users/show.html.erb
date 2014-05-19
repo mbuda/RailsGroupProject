@@ -3,6 +3,11 @@
 <p>Username: <%= @user.nickname %> </p><br><br>
 <p>Description: <%= @user.description %></p><br><br>
 
+<div class="links">
+  <div class="btn btn-info">
+	<%= link_to 'Edit', edit_user_path(@user) %>
+  </div>
+
 <h3> <%= @user.nickname %> reviews: </h3><br><br>
 
 	<% @user.reviews.each do |review| %>

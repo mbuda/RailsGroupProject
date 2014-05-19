@@ -1,10 +1,9 @@
-<h1>Editing game</h1>
-
-<div class="links">
-  <div class="btn btn-info">
-    <%= link_to 'Back', reviews_path %>
+<%= content_for :title, "Edit game #{@game.title_capital}" %>
+<div class="container">
+  <div class="page-header">
+    <h1>Editing game</h1>
   </div>
-
+  <div class="divider">
+  </div>
   <%= render 'form' %>
-
 </div>

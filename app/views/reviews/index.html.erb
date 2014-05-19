@@ -1,8 +1,10 @@
+<%= content_for :title, "List of reviews" %>
 <h1>List of reviews</h1>
 
 <table class="table">
   <thead>
     <tr>
+      <th>Game</th>
       <th>Title</th>
       <th>Description</th>
       <th>Author</th>
@@ -12,7 +14,8 @@
   <tbody>
     <% @reviews.each do |review| %>
       <tr>
-        <td><%= review.title_capital %></td>
+        <td><%= review.game_title %></td>
+        <td><%= link_to review.title_capital, game_review_path(review.game, review) %></td>
         <td><%= review.full_description %></td>
         <td><%= review.nick%></td>
         <td><%= review.comments.size%></td>
@@ -20,6 +23,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'Add new review', new_review_path %>
-

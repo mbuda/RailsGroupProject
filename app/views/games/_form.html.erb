@@ -1,38 +1,46 @@
-<%= form_for(@game) do |f| %>
+<div class="col-xs-8">
+  <div class="page header">
+    <h3>Fill the form</h3>
+  </div>
+  <div class="col-xs-7 well well-lg">
+    <%= simple_form_for @game, html: { class: "form-horizontal" } do |f| %>
+      <div class="row">
+        <div class="col-xs-7">
+          <fieldset>
+            <div class="form-group">
+              <%= f.input :title, class: "form-control" %>
+            </div>
 
-	<div class="field">
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-	</div>	
+            <div class="form-group">
+              <%= f.input :description, class: "form-control" %>
+            </div>
 
-	<div class="field">
-		<%= f.label :description %><br>
-		<%= f.text_field :description %>
-	</div>	
+            <div class="form-group">
+              <%= f.input :requirements, class: "form-control" %>
+            </div>
 
-	<div class="field">
-		<%= f.label :requirements %><br>
-		<%= f.text_field :requirements %>
-	</div>	
+            <div class="form-group">
+              <%= f.select :genre, options_for_select(%w[action fps shooter rpg mmo strategy slasher simulation sport]), class: "form-control" %>
+            </div>
 
-	<div class="field">
-		<%= f.label :genre %><br>
-		<%= f.select :genre %>
-	</div>	
+            <div class="form-group">
+              <%= f.input :pegi, class: "form-control" %>
+            </div>
 
-	<div class="field">
-		<%= f.label :PEGI %><br>
-		<%= f.select :PEGI %>
-	</div>	
+            <div class="form-group">
+              <%= f.input :release_date, class: "form-control" %>
+            </div>
 
-	<div class="field">
-		<%= f.label :release_date %><br>
-		<%= f.text_field :release_date %>
-	</div>		
-
-	<div class="field">
-		<%= f.label :producent %><br>
-		<%= f.text_field :producent %>
-	</div>		
-
-<% end %>
+            <div class="form-group">
+              <%= f.input :producent, class: "form-control" %>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit %>
+              <%= link_to 'Cancel', game_path(@game), class: "btn btn-primary" %>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
