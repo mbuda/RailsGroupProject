@@ -5,7 +5,7 @@ FactoryGirl.define do
     release_date '2014-03-30'
     requirements 'medium'
     genre 'action'
-    PEGI '16'
+    pegi '16'
     producent 'Ubisoft'
   end
 

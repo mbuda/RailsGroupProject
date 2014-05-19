@@ -8,7 +8,7 @@ describe ReviewsController do
       release_date:"2013-09-09",
       requirements:"high",
       genre:"slasher",
-      PEGI: "15",
+      pegi: "15",
       producent:
       "Capcom")
   }
