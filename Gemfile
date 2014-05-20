@@ -38,7 +38,8 @@ group :doc do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec', '~> 3.0.0.beta'
+  gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'guard'
   gem 'guard-rspec'
   gem 'capybara'
