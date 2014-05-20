@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Group</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Group</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
+    <header class="navbar navbar-top" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li><a class="navbar-brand glyphicon glyphicon-cloud" href="/"> TheProcrastinatorsGames</a></li>
+              <li><a href="https://github.com/mbuda/RailsGroupProject">Github</a></li>
+              <li><a href="games">Games</a></li>
+              <li><a href="users">Users</a></li>
+              <li><a href="comments">Comments</a></li>
+            </ul>
 
-</body>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div><!-- /.container-fluid -->
+    </header>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  <footer class="navbar navbar-bottom">
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="https://github.com/mbuda" class="glyphicon glyphicon-user"> Buda Marta</a></li>
+              <li><a href="https://github.com/aczerwinska" class="glyphicon glyphicon-user"> Czerwinska Agnieszka</a></li>
+              <li><a href="https://github.com/mmaciejewski" class="glyphicon glyphicon-user"> Maciejewski Michal</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div><!-- /.container-fluid -->
+    </footer>
+
+  </body>
 </html>
