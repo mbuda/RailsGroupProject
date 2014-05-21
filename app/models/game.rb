@@ -43,6 +43,14 @@ class Game < ActiveRecord::Base
 	producent unless producent.nil?
   end
 
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
+
   private
   def date_is_date?
     unless release_date.is_a?(Date)

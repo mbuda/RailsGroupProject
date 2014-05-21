@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20140518084146) do
 
   create_table "comments", force: true do |t|
     t.string  "text"
-    t.integer "review_id"
     t.integer "user_id"
   end
 
