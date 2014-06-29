@@ -8,6 +8,7 @@
       <h3><strong><%= @review.title_capital %></strong></h3>
       <h4><%= link_to @review.game_title, @review.game %></h4>
       <p><%= @review.full_description %></p>
+      <p>created at <%= @review.created_at.strftime("%b %d, %Y") %> </p>
       <p>by <%= @review.nick %></p>
     </div>
   </div>
@@ -24,6 +25,7 @@
     <% @review.comments.each do |comment| %>
       <div class="well">
         <p><%= comment.text %></p>
+        <p><%= comment.created_at.strftime("%b %d, %Y") %></p>
       </div>
     <% end %>
   </div>

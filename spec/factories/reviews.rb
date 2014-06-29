@@ -3,6 +3,7 @@ FactoryGirl.define do
     association :game
     title 'Cool stuff'
     description 'I recommend this'
+    created_at '2014-04-29'
   end
 
   factory :other_review, class: Review do
