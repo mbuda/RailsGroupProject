@@ -11,36 +11,36 @@ class Game < ActiveRecord::Base
   validates :producent, presence: true
   validate :date_is_date?
 
-  def title_capital
-    	title.capitalize unless title.nil?
+  def game_title
+    title unless title.nil?
   end
 
   def full_description
-    	description.split.join(' ') unless description.nil?
+    description.split.join(' ') unless description.nil?
   end
 
   def min_description
-    	description.split[0..15].join(' ') unless description.nil?
+    description.split[0..15].join(' ') unless description.nil?
   end
 
   def rel_date
-    	release_date unless release_date.nil?
+    release_date unless release_date.nil?
   end
 
   def req
-    	requirements unless requirements.nil?
+    requirements unless requirements.nil?
   end
 
   def game_genre
-	genre unless genre.nil?
+    genre unless genre.nil?
   end
 
   def game_pegi
-	pegi unless pegi.nil?
+    pegi unless pegi.nil?
   end
 
   def game_producent
-	producent unless producent.nil?
+    producent unless producent.nil?
   end
 
   def self.search(search)
