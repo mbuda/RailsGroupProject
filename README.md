@@ -11,26 +11,22 @@
 
 ##Used gems
 
-* 'rails'
-* 'pg'
-* 'shelly-dependencies'
-* 'thin'
-*'simple_form'
+* 'pg' - PostgreSQL database
+* 'shelly-dependencies' - hosted on Shelly Cloud
+* 'thin' - web server
+* 'simple_form' - make writing forms simpler
 * 'sass-rails'
 * 'bootstrap-sass'
 * 'bootstrap_form'
-* 'uglifier'
-* 'coffee-rails'
-* 'jquery-rails'
-* 'turbolinks'
-* 'jbuilder'
-* 'sdoc'
-* 'rspec-rails'
-* 'guard'
-* 'guard-rspec'
-* 'capybara'
-* 'factory_girl_rails'
+* 'rspec-rails' - for testing
+* 'guard' - for automatic tests
+* 'guard-rspec' - this one too
+* 'capybara' - testing support
+* 'factory_girl_rails' - factories for tests
 
-##Descritpion
+##Description
 
-It's an aplication design to post and review games. Users can descripe the game and give a brief review. Games and reviews can be created, edited and deleted
+It's an aplication design to post and review games.
+Users can describe the game and give it a brief review.
+Games and reviews can be created, edited and deleted
+Reviews can be commented as well.
