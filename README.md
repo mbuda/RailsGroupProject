@@ -1,6 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/mbuda/RailsGroupProject.png?branch=master)](http://travis-ci.org/mbuda/RailsGroupProject)
 
-[Our app on shelly](http://game-reviews.shellyapp.com/ "Visit us")
+[Our app on heroku](http://game-reviews.herokuapp.com/ "Visit us")
 
 ##Team The Procrastinators
 
