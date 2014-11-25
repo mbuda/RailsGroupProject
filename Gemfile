@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.3'
+gem 'rails_12factor', group: :production
 gem 'pg'
-gem 'shelly-dependencies', group: :production
 gem 'thin'
 gem 'simple_form'
 gem 'sass-rails', '~> 4.0.0'
